@@ -1,11 +1,11 @@
-def to_CamelCase(name):
+def to_camel_case(name):
     #replace this for solution
     return NewName
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert to_CamelCase("my_function_name") == "MyFunctionName"
-    assert to_CamelCase("i_phone") == "IPhone"
-    assert to_CamelCase("this_function_is_empty") == "ThisFunctionIsEmpty"
-    assert to_CamelCase("name") == "Name"
+    assert to_camel_case("my_function_name") == "MyFunctionName"
+    assert to_camel_case("i_phone") == "IPhone"
+    assert to_camel_case("this_function_is_empty") == "ThisFunctionIsEmpty"
+    assert to_camel_case("name") == "Name"
 
