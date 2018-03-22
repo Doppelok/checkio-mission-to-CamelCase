@@ -2,7 +2,7 @@
 
 function toCamelCase(name) {
     // your code here
-    return 0;
+    return name;
 }
 
 var assert = require('assert');
