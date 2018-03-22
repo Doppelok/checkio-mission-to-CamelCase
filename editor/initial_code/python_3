@@ -1,6 +1,6 @@
 def to_camel_case(name):
     #replace this for solution
-    return new_name
+    return name
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
