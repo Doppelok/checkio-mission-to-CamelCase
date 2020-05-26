@@ -1,4 +1,4 @@
-def to_camel_case(name):
+def to_camel_case(name: str) -> str:
     #replace this for solution
     return name
 
