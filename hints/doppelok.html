@@ -1,0 +1,77 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        I don't know how to start solving this mission
+    </div>
+    <div class="answer">
+        You need to split the given text into lines. Focus on "_". Every word that came after
+         "_", as well as the first word in the text, must be capitalized.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I need help to continue the mission
+    </div>
+    <div class="answer">
+        You may find it useful to read a little about the string method: <a
+            href='https://docs.python.org/3.10/library/stdtypes.html?highlight=split#str.split'>str.split()</a>.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Need help!
+    </div>
+    <div class="answer">
+        See how the str.split() method works:
+        <pre class="brush: python">
+text = "Hello, world!"
+text.split()  # By default, str.split() returns a list of words in a string,
+              # using "sep" as spaces
+>> ['Hello,', 'world!']
+
+text.split('o')  # If we type "sep" as the letter "o", we see the following
+>> ['Hell', ', w', 'rld!']
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        I need a little hint.
+    </div>
+    <div class="answer">
+        Let's use the expression generator for the solution. Here's the idea: the generator expression will help you without extra variables
+         go through the list of split words and capitalize them. Here is an example:
+        <pre class="brush: python">
+txt = "this_function_is_empty"
+txt = (i.capitalize() for i in name.split('_'))
+>>  ['This', 'Function', 'Is', 'Empty']  # In order to see the result, it is necessary
+                                         # to use list() on expression
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Nothing works. SOS
+    </div>
+    <div class="answer">
+        All that's left for you to do is concatenate the list of words back into a string. Use this method <a
+            href='https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20join#str.join'>str.join()</a>
+        <pre class="brush: python">
+''.join(i.capitalize() for i in name.split('_'))
+>>  "ThisFunctionIsEmpty"
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Last question. What will my final solution look like?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def to_camel_case(name: str) -> str:
+    return ''.join(i.capitalize() for i in name.split('_'))
+    </div>
+</div>
+
+
+</body>

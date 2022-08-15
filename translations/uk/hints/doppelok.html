@@ -1,0 +1,77 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        Я не знаю, як розпочати вирішення цієї місії
+    </div>
+    <div class="answer">
+        Тобі потрібно розділити заданий текст на рядки. Орієнтуйся при цьому на "_". Кожне слово яке було після
+        "_", а також перше слово у тексті, потрібно зробити з великої букви.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Мені потрібна допомога, щоб продовжити місію
+    </div>
+    <div class="answer">
+        Тобі буде корисно прочитати трохи інформації рядковий метод: <a
+            href='https://docs.python.org/3.10/library/stdtypes.html?highlight=split#str.split'>str.split()</a>.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Потрібна допомога!
+    </div>
+    <div class="answer">
+        Подивись, як працює метод str.split():
+        <pre class="brush: python">
+text = "Hello, world!"
+text.split()  # По замовчуванню, str.split() повертає список слів у рядку,
+              # використовуючи "sep" як пробіли
+>> ['Hello,', 'world!']
+
+text.split('o')  # Якщо ми введемо "sep" як літеру "o", ми побачимо наступне
+>> ['Hell', ', w', 'rld!']
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Мені потрібна маленька підказка.
+    </div>
+    <div class="answer">
+        Давай для рішення використаємо вираз генератор. Ось в чому ідея: вираз генератор тобі допоможе без лишніх змінних
+        пройтись по списку розділених слів, та зробити їх з великої букви. Ось приклад:
+        <pre class="brush: python">
+txt = "this_function_is_empty"
+txt = (i.capitalize() for i in name.split('_'))
+>>  ['This', 'Function', 'Is', 'Empty']  # Для того, щоб побачити результат, треба
+                                         # Треба використати list() на вираз
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Нічого не працює. SOS
+    </div>
+    <div class="answer">
+        Все, що тобі залишилось це з'єднати список слів назад до рядку. Використай <a
+            href='https://docs.python.org/3.10/library/stdtypes.html?highlight=str%20join#str.join'>str.join()</a>
+        <pre class="brush: python">
+''.join(i.capitalize() for i in name.split('_'))
+>>  "ThisFunctionIsEmpty"
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Останнє запитання. Як виглядатиме моє остаточне рішення?
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def to_camel_case(name: str) -> str:
+    return ''.join(i.capitalize() for i in name.split('_'))
+    </div>
+</div>
+
+
+</body>

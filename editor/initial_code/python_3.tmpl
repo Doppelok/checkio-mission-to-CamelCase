@@ -1,0 +1,24 @@
+{% comment %}New initial code template{% endcomment %}
+{% block env %}{% endblock env %}
+
+{% block start %}
+def to_camel_case(name: str) -> str:
+    #replace this for solution
+    return name
+
+{% endblock start %}
+
+{% block example %}
+print('Example:')
+print(to_camel_case("my_function_name"))
+{% endblock %}
+
+{% block tests %}
+{% for t in tests %}
+assert {% block call %}to_camel_case({{t.input|p_args}})
+{% endblock %} == {% block result %}{{t.answer|p}}{% endblock %}{% endfor %}
+{% endblock %}
+
+{% block final %}
+print("The mission is done! Click 'Check Solution' to earn rewards!")
+{% endblock final %}

@@ -23,17 +23,7 @@
 <p>
 <strong>Примеры:</strong>
 </p>
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">toCamelCase('my_function_name') == 'MyFunctionName'
-toCamelCase('i_phone') == 'IPhone'
-</pre>
-{% else %}
-<pre class="brush: python">to_camel_case("my_function_name") == "MyFunctionName"
-to_camel_case("i_phone") == "IPhone"
-to_camel_case("this_function_is_empty") == "ThisFunctionIsEmpty"
-to_camel_case("name") == "Name"
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <!-- Here you can explain how it can be used in development and what is usage of this. -->
